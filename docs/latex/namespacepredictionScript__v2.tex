@@ -1,0 +1,66 @@
+\hypertarget{namespacepredictionScript__v2}{}\section{prediction\+Script\+\_\+v2 Namespace Reference}
+\label{namespacepredictionScript__v2}\index{prediction\+Script\+\_\+v2@{prediction\+Script\+\_\+v2}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacepredictionScript__v2_a4a283a90ac878184d28aaa1803b25869}{get\+\_\+prediction\+\_\+index}} (target\+\_\+class)
+\item 
+\mbox{\Hypertarget{namespacepredictionScript__v2_a1faea6d0bfb5cae21b0939602403580d}\label{namespacepredictionScript__v2_a1faea6d0bfb5cae21b0939602403580d}} 
+def {\bfseries get\+\_\+model} (model\+\_\+name, num\+\_\+classes)
+\item 
+def \mbox{\hyperlink{namespacepredictionScript__v2_a2c9da50db5049263eaff30deb3dfe287}{create\+\_\+attention\+\_\+map}} (target\+\_\+class, model\+\_\+name, num\+\_\+classes, slide\+\_\+folder\+\_\+path)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacepredictionScript__v2_a492213a68d1e4055fa3c42c45707f196}\label{namespacepredictionScript__v2_a492213a68d1e4055fa3c42c45707f196}} 
+int {\bfseries dim\+\_\+tile} = 224
+\item 
+\mbox{\Hypertarget{namespacepredictionScript__v2_abf074e6cfa751ed6c36337475c5d29a9}\label{namespacepredictionScript__v2_abf074e6cfa751ed6c36337475c5d29a9}} 
+int {\bfseries overlap\+\_\+tile} = 50
+\item 
+\mbox{\Hypertarget{namespacepredictionScript__v2_a888cb4cb234dcaae358e8076262e9cf5}\label{namespacepredictionScript__v2_a888cb4cb234dcaae358e8076262e9cf5}} 
+int {\bfseries level\+\_\+tile} = 1
+\item 
+\mbox{\Hypertarget{namespacepredictionScript__v2_ac5c71860d8ff48e28d8e568b5b53cf88}\label{namespacepredictionScript__v2_ac5c71860d8ff48e28d8e568b5b53cf88}} 
+string {\bfseries result\+\_\+folder} = \char`\"{}./results/\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}1. crop svs images in tiles
+2. predict
+3. recombine tiles
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacepredictionScript__v2_a2c9da50db5049263eaff30deb3dfe287}\label{namespacepredictionScript__v2_a2c9da50db5049263eaff30deb3dfe287}} 
+\index{prediction\+Script\+\_\+v2@{prediction\+Script\+\_\+v2}!create\+\_\+attention\+\_\+map@{create\+\_\+attention\+\_\+map}}
+\index{create\+\_\+attention\+\_\+map@{create\+\_\+attention\+\_\+map}!prediction\+Script\+\_\+v2@{prediction\+Script\+\_\+v2}}
+\subsubsection{\texorpdfstring{create\+\_\+attention\+\_\+map()}{create\_attention\_map()}}
+{\footnotesize\ttfamily def prediction\+Script\+\_\+v2.\+create\+\_\+attention\+\_\+map (\begin{DoxyParamCaption}\item[{}]{target\+\_\+class,  }\item[{}]{model\+\_\+name,  }\item[{}]{num\+\_\+classes,  }\item[{}]{slide\+\_\+folder\+\_\+path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}main function
+
+:param str target_class: class of intrest. Choose from: "H","non-H","AC","AD"
+:param str model_h5: path to the .h5 file of the trained model to be used for prediction
+:param str test_image_path: path to the folder where test images (.svs format) are stored
+:param str tile_dest_folder: path to the existing folder where the cropped files will be stored
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacepredictionScript__v2_a4a283a90ac878184d28aaa1803b25869}\label{namespacepredictionScript__v2_a4a283a90ac878184d28aaa1803b25869}} 
+\index{prediction\+Script\+\_\+v2@{prediction\+Script\+\_\+v2}!get\+\_\+prediction\+\_\+index@{get\+\_\+prediction\+\_\+index}}
+\index{get\+\_\+prediction\+\_\+index@{get\+\_\+prediction\+\_\+index}!prediction\+Script\+\_\+v2@{prediction\+Script\+\_\+v2}}
+\subsubsection{\texorpdfstring{get\+\_\+prediction\+\_\+index()}{get\_prediction\_index()}}
+{\footnotesize\ttfamily def prediction\+Script\+\_\+v2.\+get\+\_\+prediction\+\_\+index (\begin{DoxyParamCaption}\item[{}]{target\+\_\+class }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}convertion from class name to the corresponding index in the prediction array
+:param str target_class: class of interest
+
+# Supported classes
+H - Healthy
+Non-H - Not healthy
+AC - Adenocarcinoma
+AD - Adenoma
+\end{DoxyVerb}
+ 

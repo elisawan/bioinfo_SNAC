@@ -1,0 +1,41 @@
+This project is focused on the digital pathology field. Pathologists perform diagnosis based on the visualization of histological samples. Usually the examination is visual\+: doctors look for abnormalities and decides for a diagnosis
+
+We developed a system that can take in input a W\+SI (whole histological image) and create a attention map for cancer detection.
+
+The W\+SI is passed to a trained neural network that performs the prediction and delivers the final result
+
+\subsection*{Motivation}
+
+The project was developed and delivered for the Bioinformatic (01O\+V\+F\+OV) course at {\bfseries{Politecnico di Torino}}, held by professor Elisa Ficarra, by Group 6 (Elisa Wan, Andrea Grippi, Silvia Fornara, Greta Berardengo)
+
+\subsection*{Installation}
+
+Before using the prediction script make sure to have all the requirements available on your system. You can run\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ pip install -r requirements.txt}
+\end{DoxyCode}
+
+
+\subsection*{A\+PI Reference}
+
+Information on classes, methods and files are attached to this html documentation.
+
+\subsection*{Tests}
+
+To use this prediction software, just type on your command line\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ python predictionScript.py \{class\_of\_interest\} \{model\_path\} \{number\_classes\} \{image\_folder\}}
+\end{DoxyCode}
+
+
+class\+\_\+of\+\_\+interest indicates the type of tissue you want highlighted in the attention map. It can take one of the following values\+: H, non-\/H, AC, AD. model\+\_\+name is the name of the model to be used for prediction. It should be chosen from one of the available pretrained models\+: inception\+Res\+Net\+V2, vgg-\/16 or basic\+\_\+\+NN. number\+\_\+classes number of classes on which the model has been trained on. It can be 2 (H, non-\/H) or 3 (H, AC, AD). image\+\_\+folder is the path of the folder containing images you want to get a prediction of.
+
+Note\+: Models trained on 2 classes only support class\+\_\+of\+\_\+interest = H or non-\/H. Models trained on 3 classes support class\+\_\+of\+\_\+interest = H, AC or AD.
+
+\subsection*{License}
+
+Delivered with licence G\+NU G\+PL v3 

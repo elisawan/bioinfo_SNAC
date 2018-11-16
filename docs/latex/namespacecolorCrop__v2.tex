@@ -1,0 +1,39 @@
+\hypertarget{namespacecolorCrop__v2}{}\section{color\+Crop\+\_\+v2 Namespace Reference}
+\label{namespacecolorCrop__v2}\index{color\+Crop\+\_\+v2@{color\+Crop\+\_\+v2}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecolorCrop__v2_a9d918ed3cd2a8d29294f8569a5d8507e}{evaluate\+Prediction}} (prediction)
+\item 
+def \mbox{\hyperlink{namespacecolorCrop__v2_a515a35882591be38d4648a9102222969}{apply\+Overlay}} (img, prediction)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This file contains the methods needed to colour an image according to the prediction of the neural network
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacecolorCrop__v2_a515a35882591be38d4648a9102222969}\label{namespacecolorCrop__v2_a515a35882591be38d4648a9102222969}} 
+\index{color\+Crop\+\_\+v2@{color\+Crop\+\_\+v2}!apply\+Overlay@{apply\+Overlay}}
+\index{apply\+Overlay@{apply\+Overlay}!color\+Crop\+\_\+v2@{color\+Crop\+\_\+v2}}
+\subsubsection{\texorpdfstring{apply\+Overlay()}{applyOverlay()}}
+{\footnotesize\ttfamily def color\+Crop\+\_\+v2.\+apply\+Overlay (\begin{DoxyParamCaption}\item[{}]{img,  }\item[{}]{prediction }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Method called to apply overlay to an image according to its prediction value
+
+:param np.array img: numpy array
+:param float prediction: Prediction value
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacecolorCrop__v2_a9d918ed3cd2a8d29294f8569a5d8507e}\label{namespacecolorCrop__v2_a9d918ed3cd2a8d29294f8569a5d8507e}} 
+\index{color\+Crop\+\_\+v2@{color\+Crop\+\_\+v2}!evaluate\+Prediction@{evaluate\+Prediction}}
+\index{evaluate\+Prediction@{evaluate\+Prediction}!color\+Crop\+\_\+v2@{color\+Crop\+\_\+v2}}
+\subsubsection{\texorpdfstring{evaluate\+Prediction()}{evaluatePrediction()}}
+{\footnotesize\ttfamily def color\+Crop\+\_\+v2.\+evaluate\+Prediction (\begin{DoxyParamCaption}\item[{}]{prediction }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Method called to compute the alpha value of the red mask to apply to the image slice, based on the value of the prediction
+
+:param float prediction: Prediction value
+\end{DoxyVerb}
+ 

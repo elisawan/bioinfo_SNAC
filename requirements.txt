@@ -1,0 +1,11 @@
+numpy
+matplotlib
+pandas
+tensorflow
+keras
+scikit-learn
+Pillow
+opencv-python
+scikit-image
+openslide-python
+progressbar2
