@@ -1,3 +1,6 @@
+# SNAC
+![](https://github.com/elisawan/bioinfo_SNAC/blob/master/process.png)
+
 ## Synopsis
 
 This project is focused on the digital pathology field.
@@ -7,6 +10,8 @@ Usually the examination is visual: doctors look for abnormalities and decides fo
 We developed a system that can take in input a WSI (whole histological image) and create a attention map for cancer detection.
 
 The WSI is passed to a trained neural network that performs the prediction and delivers the final result
+
+![](https://github.com/elisawan/bioinfo_SNAC/blob/master/attention_map_01.png)
 
 ## Motivation
 
